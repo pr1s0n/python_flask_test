@@ -42,7 +42,6 @@ async def init_pg(app):
     )
     app['db'] = engine
 
-
 async def close_pg(app):
     app['db'].close()
     await app['db'].wait_closed()
